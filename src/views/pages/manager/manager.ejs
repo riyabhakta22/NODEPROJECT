@@ -1,0 +1,112 @@
+<%- include('../../partials/sidebar') %>
+<%- include('../../partials/Header') %>
+
+
+<main id="main" class="main">
+
+<div class="card">
+    <div class="card-body">
+      <h5 class="card-title">Managers Table</h5>
+
+      <!-- Default Table -->
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col"> Sr.</th>
+            <th scope="col">Manager</th>
+            <th scope="col">Manager's Email</th>
+            <th scope="col">Password</th>
+            <th scope="col">Actions</th>
+          </tr>
+          <tbody>
+            <% managers && managers.map((manager, index)=>{ %>
+            <tr>
+              <th scope="row">1</th>
+              <td><%= index + 1 %></td>
+
+            </tr>
+            <tr>
+              <th scope="row">2</th>
+              <%= manager.name %>
+           
+            </tr>
+            <tr>
+                <th scope="row">2</th>
+                <td><h5>
+                    <%= manager.email %>
+                    </h5></td>
+             
+              </tr>
+            <tr>
+                <tr>
+                    <th scope="row">2</th>
+                    <td><h5>
+                        <%= manager.show %>
+                        </h5></td>
+                 
+                  </tr>
+                <tr>
+              <th scope="row">3</th>
+              <td>
+                <a class="btn btn-primary" href="/manager/edit/<%= manager._id %>">
+                  
+                  </a>
+
+                  <a class="btn btn-primary" href="/manager/delete/<%= manager._id %>">
+                   
+                  </a>
+              </td>
+           
+            </tr>
+            <% }) %>
+          </tbody>
+            <!-- <% products && products.map((product, index)=>{ %>
+            <tr>
+              <th scope="row">1</th>
+              <td><%= index + 1 %></td>
+
+            </tr>
+            <tr>
+              <th scope="row">2</th>
+              <%= product.name %>
+           
+            </tr>
+            <tr>
+                <th scope="row">2</th>
+                <td><h5>
+                    <% if (product.subCategoryID) { %>
+                        <%= product.subCategoryID.name %>
+                          <% } %>
+                    </h5></td>
+             
+              </tr>
+            <tr>
+                <tr>
+                    <th scope="row">2</th>
+                    <td><h5>
+                        <% if (product.subCategoryID && product.subCategoryID.categoryID) { %>
+                            <%= product.subCategoryID.categoryID.name %>
+                              <% } %>
+                        </h5></td>
+                 
+                  </tr>
+                <tr>
+              <th scope="row">3</th>
+              <td>
+                <a class="btn btn-primary" href="/product/edit/<%= product._id %>">
+                  
+                  </a>
+
+                  <a class="btn btn-primary" href="/product/delete/<%= product._id %>">
+                   
+                  </a>
+              </td>
+           
+            </tr>
+            <% }) %> -->
+          </tbody>
+      </table>
+      <!-- End Default Table Example -->
+    </div>
+  </div>
+  </main>

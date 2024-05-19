@@ -1,0 +1,43 @@
+<%- include('../../partials/sidebar') %>
+<%- include('../../partials/Header') %>
+
+
+<main id="main" class="main">
+<div class="col-lg-6">
+
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Add Manager</h5>
+
+        <!-- Vertical Form -->
+        <form class="row g-3" action="" method="post">
+          <div class="col-12">
+            <label  class="form-label">Manager's Name</label>
+            <input type="text" class="form-control" name="name" placeholder="For example: name" required>
+          </div>
+          <div class="col-12">
+            <label  class="form-label">Manager's Email</label>
+            <input type="text" name="email" class="form-control"  placeholder="For example: name@gmail.com" required>
+          </div>
+
+          <div class="col-12">
+            <label  class="form-label">Password</label>
+            <input type="password" class="form-control"  placeholder="Password">
+          </div>
+          <!-- <div class="col-12">
+            <label for="inputPassword4" class="form-label">Password</label>
+            <input type="password" class="form-control" id="inputPassword4">
+          </div>
+          <div class="col-12">
+            <label for="inputAddress" class="form-label">Address</label>
+            <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+          </div> -->
+          <div class="text-center">
+            <button class="btn btn-primary">Create Manager</button>
+           
+          </div>
+        </form><!-- Vertical Form -->
+
+      </div>
+    </div>
+  </main>

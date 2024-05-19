@@ -1,0 +1,44 @@
+<%- include('../../partials/sidebar') %>
+<%- include('../../partials/Header') %>
+
+
+<main id="main" class="main">
+
+<div class="col-lg-6">
+
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Add Sub-Category</h5>
+
+        <!-- Vertical Form -->
+        <form class="row g-3" action="" method="post">
+          <div class="col-12">
+            <label  class="form-label">Add Sub-Category</label>
+            <input type="text" class="form-control" name="name" placeholder="For example: Shirts, Formal Wear" required>
+          </div>
+          <div class="col-12">
+            <label class="form-label">Category</label>
+            <select class="form-select" aria-label="Default select example" name="categoryID" required>
+                <option selected>Select Category</option>
+                <% categories.forEach(category=> {%>
+                <option value="<%= category._id %>"> <%= category.name %></option>
+                <% }); %>
+              </select>
+          </div>
+          <!-- <div class="col-12">
+            <label for="inputPassword4" class="form-label">Password</label>
+            <input type="password" class="form-control" id="inputPassword4">
+          </div>
+          <div class="col-12">
+            <label for="inputAddress" class="form-label">Address</label>
+            <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+          </div> -->
+          <div class="text-center">
+            <button class="btn btn-primary">Create Sub-Category</button>
+           
+          </div>
+        </form><!-- Vertical Form -->
+
+      </div>
+    </div>
+  </main>

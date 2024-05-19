@@ -1,0 +1,72 @@
+<%- include('../../partials/sidebar') %>
+<%- include('../../partials/Header') %>
+
+
+<main id="main" class="main">
+
+<div class="card">
+    <div class="card-body">
+      <h5 class="card-title">Products Table</h5>
+
+      <!-- Default Table -->
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col"> Sr.</th>
+            <th scope="col">Produts</th>
+            <th scope="col">Sub-Category</th>
+            <th scope="col">Category</th>
+            <th scope="col">Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+            <% products && products.map((product, index)=>{ %>
+            <tr>
+              <th scope="row">1</th>
+              <td><%= index + 1 %></td>
+
+            </tr>
+            <tr>
+              <th scope="row">2</th>
+              <%= product.name %>
+           
+            </tr>
+            <tr>
+                <th scope="row">2</th>
+                <td><h5>
+                    <% if (product.subCategoryID) { %>
+                        <%= product.subCategoryID.name %>
+                          <% } %>
+                    </h5></td>
+             
+              </tr>
+            <tr>
+                <tr>
+                    <th scope="row">2</th>
+                    <td><h5>
+                        <% if (product.subCategoryID && product.subCategoryID.categoryID) { %>
+                            <%= product.subCategoryID.categoryID.name %>
+                              <% } %>
+                        </h5></td>
+                 
+                  </tr>
+                <tr>
+              <th scope="row">3</th>
+              <td>
+                <a class="btn btn-primary" href="/product/edit/<%= product._id %>">
+                  
+                  </a>
+
+                  <a class="btn btn-primary" href="/product/delete/<%= product._id %>">
+                   
+                  </a>
+              </td>
+           
+            </tr>
+            <% }) %>
+          </tbody>
+      </table>
+      <!-- End Default Table Example -->
+    </div>
+  </div>
+  </main>

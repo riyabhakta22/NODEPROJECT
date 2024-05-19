@@ -1,0 +1,59 @@
+<%- include('../../partials/sidebar') %>
+<%- include('../../partials/Header') %>
+
+
+<main id="main" class="main">
+<div class="col-lg-6">
+
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Add Product</h5>
+
+        <!-- Vertical Form -->
+        <form class="row g-3" action="" method="post">
+          <div class="col-12">
+            <label  class="form-label">Add Product</label>
+            <input type="text" class="form-control" name="name"  placeholder="For example: Shirts, Formal Wear" required>
+          </div>
+
+          <div class="col-12">
+            <label class="form-label" name="description">Description</label>
+                        <textarea class="form-control" placeholder="Description of your product" rows="3"></textarea>
+          </div>
+
+          <div class="col-12">
+            <label class="form-label" name="price">Price </label>
+                        <input type="number" name="price" class="form-control" placeholder="For example: Shirts, Formal Wear" required>
+          </div>
+
+          <div class="col-12">
+            <label class="form-label">Attach your file</label>
+                        <input class="form-control" type="file" name="productimage" >
+          </div>
+
+          <div class="col-12">
+            <label class="form-label">Sub-Category</label>
+                        <select class="form-select" aria-label="Default select example" name="categoryID" required>
+                            <option selected>Select Category</option>
+                            <% subcategories.forEach(subcategory=> {%>
+                            <option value="<%= subcategory._id %>"> <%= subcategory.name %></option>
+                            <% }); %>
+                          </select>
+          </div>
+          <!-- <div class="col-12">
+            <label for="inputPassword4" class="form-label">Password</label>
+            <input type="password" class="form-control" id="inputPassword4">
+          </div>
+          <div class="col-12">
+            <label for="inputAddress" class="form-label">Address</label>
+            <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+          </div> -->
+          <div class="text-center">
+            <button class="btn btn-primary">Create Product</button>
+           
+          </div>
+        </form><!-- Vertical Form -->
+
+      </div>
+    </div>
+  </main>
