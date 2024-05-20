@@ -79,13 +79,14 @@ const userController = {
                 })
 
                 const mailOptions = {
-                    from: 'riyabhakta22@gmail.com',
+                    from: 'kashyap29700@gmail.com',
                     to: user.email,
                     subject: 'Login OTP',
                     // text: `Hello, Your OTP for login is: ${OTP}`,
                     html: `
                     <p>Hello, ${user.name}</p>
-                    <p>Your One-Time Password (OTP) for login is: <strong>${OTP}</strong>
+                    <p>Your One-Time Password (OTP) for login is: <strong>${OTP}</strong></p>Please enter this OTP.
+                    
                 `
                 };
 
