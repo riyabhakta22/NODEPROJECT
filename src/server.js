@@ -13,7 +13,7 @@ const ensureUserAccess = require('./middleware/ensureUserAccess');
 const app = express()
 
 // port
-const PORT = 7000;
+const PORT = 2000;
 
 // Connect to the database
 dbConnection()
